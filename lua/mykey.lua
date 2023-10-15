@@ -17,7 +17,7 @@ local autocmd_handler_buf = function(_,mode, mapkey, func, opts)
    autocmd_handler(mode,mapkey,func,opts)
 end
 
-local mykey = '<tab>'
+local mykey = '<cr>'
 vim.api.nvim_create_autocmd({"User"}, {
    pattern = "keymap",
    callback = function()
@@ -36,6 +36,9 @@ vim.api.nvim_buf_set_keymap = function(...)
 end
 M = {}
 M.setup = function (key)
+   if type(key) ~= "string"  then
+      return
+   end
    mykey = key
 end
 
