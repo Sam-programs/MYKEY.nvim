@@ -5,4 +5,7 @@ it forces a key to never be remaped
   require('mykey').setup('<tab>') -- never allow tab to be rempped by anything
 ```
 this plugin automatically maps return to the default mapping, making using autopair or completion plugins more fun :)
-and this is behaviour is not removable without editing the source code :)))))
+to disable this in your init.lua set a variable `nojoke` to true
+```lua
+nojoke = true
+```

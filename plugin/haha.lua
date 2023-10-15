@@ -1,3 +1,6 @@
+if nojoke == true then 
+   return 
+end
 local   _old_keymap_set = vim.keymap.set
 local   _old_keymap_set_buf = vim.api.nvim_buf_set_keymap
 
